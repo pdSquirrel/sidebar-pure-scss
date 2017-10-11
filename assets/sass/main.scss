@@ -1,0 +1,64 @@
+@import url( 'https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700');
+@import "reset";
+@import "variables";
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background: $greyLight;
+}
+
+
+#sideMenu {
+  background: $purpleLight;
+  width: 280px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+
+  nav {
+    padding-top: 100px;
+
+    a {
+      display: block;     /* will make them vertical */
+      color: $greyDark;
+      text-decoration: none;
+      padding: 15px 30px;
+      font-weight: 300;
+      
+      &:hover {
+        background: $purpleDark;
+        transition: all .3s ease-in-out;
+        border-left: 5px solid $greenNeon;
+        padding: 15px 30px 15px 25px;
+        
+        .fa {
+          color: $greenNeon;
+        }
+      }
+
+      .fa {
+        color: $greyDark;
+        font-size: 1.4rem;
+        margin-right: .8rem;
+        display: inline-block; /* css trick to get the text to align properly */
+        width: 30px;
+        position: relative;
+        top: 2px;
+      }
+
+      &.active {
+        background: $purpleDark;
+        border-left: 5px solid $greenNeon;
+        padding: 15px 30px 15px 25px;
+        
+        .fa {
+          color: $greenNeon;
+        }
+      }
+    }
+  }
+}
